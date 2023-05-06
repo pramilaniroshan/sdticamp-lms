@@ -56,20 +56,7 @@ if ($PAGE->theme->settings->hidefootersocial == 1) {
                 <div class="tool_usertours-resettourcontainer"></div>
                 <?php
                 $footnote = $OUTPUT->get_setting('footnote', 'format_html');
-                if (!empty($footnote)) {
-                    if ($PAGE->theme->settings->moodledocs) {
-                        $footnoteclass = 'col-md-4';
-                    } else {
-                        $footnoteclass = 'col-md-8';
-                    }
-                    $footnoteclass .= ' my-md-0 my-2';
-                    echo '<div class="'.$footnoteclass.'">'.$footnote.'</div>';
-                }
-                if ($PAGE->theme->settings->moodledocs) {
-                    echo '<div class="col-md-4 my-md-0 my-2 helplink">';
-                    echo $OUTPUT->page_doc_link();
-                    echo '</div>';
-                }
+                
                 ?>
                 <div class="col-md-4 my-md-0 my-2">
                     <?php echo $OUTPUT->standard_footer_html(); ?>
@@ -152,5 +139,6 @@ echo $OUTPUT->get_all_tracking_methods();
         M.util.js_complete('theme_boost/loader');
     });
 </script>
+
 </body>
 </html>
